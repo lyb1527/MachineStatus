@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<body>
+   
+    <table width="100%" border="2" cellspacing="0" cellpadding="0">  
+
+	<tr>
+    <th>HostName</th>
+    <th>IP</th> 
+   <!-- <th>System Type</th> -->
+    <th>Platform</th>
+   <!-- <th>Location</th> -->
+	<th>Machine</th>
+    <th>tester</th>
+    <th>duration</th>
+    <th>Usage</th>
+    <th>Note</th>
+    
+	</tr>
+
+         {% for value in rows %}
+            <tr>
+               <td> {{ value[0] }} </td>
+			   <td> {{ value[1] }} </td>
+			  <!-- <td> {{ value[2] }} </td> -->
+			   <td> {{ value[3] }} </td>
+			  <!-- <td> {{ value[4] }} </td> -->
+				<form action='/' method = 'POST'>		
+		       <td><input type = "text" name = "machine" /></td>
+			   <td><input type = "text" name = "tester" />{{ value[5]}}</td>
+			   <td><input type = "text" name = "duration" />{{ value[6]}}</td>
+			   <td><input type = "text" name = "usage" />{{ value[7]}}</td>
+			   <td><input type = "text" name = "note" />{{ value[8] }}</td>
+			   <td><input type = "submit" value = "submit" /></td>
+				</form>
+
+            </tr>
+         {% endfor %}
+      </table>
+      
+   </body>
+</html>
