@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-db = MySQLdb.connect(host='localhost', user='root', passwd='l1admin',db='HCTS')
+db = MySQLdb.connect(host='localhost', user='root', passwd='******',db='HCTS')
 
 cursor = db.cursor()
 
